@@ -54,6 +54,7 @@ address {
   text-decoration: none;
   color: inherit;
   text-decoration: none;
+  
 }
 
 .section {
@@ -67,6 +68,7 @@ address {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  fill: var(--p-color);
 }
 
 .container-header {
@@ -76,24 +78,27 @@ address {
 
 .underheader {
   background-color: var(--underheader);
-   background-image: 
-    url(../images/Img.jpg);
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ),
+url(../images/Img.jpg);
+  
 background-position:  center;
 background-repeat: no-repeat;
+background-size: cover;
   text-align: center;
   padding: 200px 0;
+  min-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
 }
 
 .header-list {
   display: flex;
 }
 
-.list-icon-why {
-  display: flex;
-  justify-content: center;
-  gap: 233px; 
-  margin-bottom: 55px;
-}
 
 .header-list-item:not(:last-child) {
   margin-right: 50px;
@@ -114,17 +119,19 @@ background-repeat: no-repeat;
 
 .images-list-item:hover,
 .images-list-item:focus  {
-  border: 1px solid #EEEEEE;
-  cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.porfolio-link:hover,
+.porfolio-link:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
 .contacts {
-  display: block;
-  text-decoration: none;
+   text-decoration: none;
   font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
+   font-weight: 500;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.02em;
@@ -294,6 +301,8 @@ color:var(--background-button-color)
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  border-color: var(--white);
+  fill: var();
 }
 
 .Web {
@@ -330,13 +339,16 @@ color:var(--background-button-color)
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
+  margin-bottom: 10px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  padding-top: 30px;
-  padding-bottom: 10px;
   text-align: center;
 
   color: var(--bold-letters);
+}
+
+.teamdiv-names {
+  padding: 30px 0;
 }
 
 .head-button {
@@ -390,12 +402,15 @@ color:var(--background-button-color)
 
 .team-background {
   background-color: var(--colorf5f4);
+  padding-bottom: 94px;
 }
 
-.background-footer {
+.footer {
   background-color: var(--footer-background);
   padding: 60px 0;
 }
+
+ 
 
 .address {
   font-style: normal;
@@ -432,6 +447,16 @@ color:var(--background-button-color)
 .our-team-section {
   display: flex;
   margin-top: 50px;
+  fill: currentColor;
+}
+
+.why-icons {
+  display: flex;
+  justify-content: center;
+  border-color: var(--colorf5f4);
+  border-radius: 4px;
+  width: 270px;
+    height: 120px;
 }
 
 .why-information {
@@ -492,40 +517,50 @@ color:var(--background-button-color)
   margin-bottom: 30px;
   margin-right: 30px;
 }
+.social-media-link
+.padding-names {
+  padding: 20px 24px;
+  border: 1px var(--border) solid;
+  border-top: none;
+  fill: currentColor;
+}
 
 .padding-names {
   padding: 20px 24px;
   border: 1px var(--border) solid;
   border-top: none;
-}
+  fill: currentColor;
+   }
 
 .social-media {
   display: flex;
   justify-content: center;
-  gap: 10px;
   padding-bottom: 30px;
-  
-}
+  }
+
 
 .social-media-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: var(--icons);
+  color: var(--p-color);
   width: 44px;
     height: 44px;
 border-color: var(--white);
 border-radius: 50%;
+padding-left: 10px;
 }
 
-.social-media-link:hover .social-media-icon,
-.social-media-link:focus .social-media-icon{
-  fill:var(--white) ;
-  }
+.social-media-link:not(:last-child) {
+margin-left: 10px;
+}
+
+
 
     .social-media-link:hover,
         .social-media-link:focus {
           background-color: var(--background-button-color);
+          color: var(--white);
         }
 
   .contacts:hover .social-media-icon,
@@ -533,22 +568,73 @@ border-radius: 50%;
     fill: var(--background-button-color);
   }
 
-    .contacts .social-media-icon {
-      margin-right: 10px;
-      
-    }
+     .social-media-icon {
+     margin-right: 10px;
+     fill: currentColor;
+          }
 
  .icon {
-  fill: var(--p-color);
+  fill: currentColor;
  }
 
  .footer-list-icon {
 display: flex;
-gap: 10px;
+margin-top: 20px;
+
  }
 
- .container-footer {
+.container-footer {
+  margin-left: 70px;
+}
+
+
+
+.p-footer {
+  text-transform: uppercase;
+  font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    
+}
+
+.footer-icon {
   display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding-left: 10px;
+    background-color:rgba(255, 255, 255, 0.1); 
+
+}
+
+.footer-icon-item:not(:last-child) {
+margin-right: 10px;
+}
+
+
+.footer-icon:hover,
+.footer-icon:focus {
+color: var(--white);
+background-color: var(--background-button-color);
+}
+
+.footer-list-icon:not(:last-child) {
+margin-right: 10px;
+}
+ 
+ .footer  {
+display: flex; 
+  align-items: baseline;
+  }
+
+ .clients {
+  padding-bottom: 94px;
  }
 
 .our-clients {
@@ -558,26 +644,16 @@ gap: 10px;
     font-size: 36px;
     text-align: center;
     letter-spacing: 0.03em;
-    padding-top: 188px;
-    padding-bottom: 50px;
+    padding-top: 94px;
+    margin-bottom: 50px;
 }
 
 .list-icon-client {
   display: flex;
-  justify-content: center;
-  gap: 30px ;
 }
  
-
-.item-icon-client {
-  display: flex;
-  justify-content: center;
-    align-items: center;
-  width: 170px;
-  height: 92px;
-  border: var(--icons) solid 1px;
-  border-radius: 4px;
-
+.item-icon-client:not(:last-child) {
+  margin-right: 30px;
 }
 
 .icon-item {
@@ -585,17 +661,31 @@ gap: 10px;
 }
 
 .icon-clients {
-  fill: var(--icons);
-  width: 206px;
-  padding: 16, 32px;
+  fill: currentColor;
+  width: 106px;
+  height: 60px;
   }
 
-.item-icon-client:hover .icon-clients,
-.item-icon-client:focus .icon-clients {
+.link-clients:hover .icon-clients,
+.link-clients:focus .icon-clients {
   fill: var(--background-button-color);
- }
-
- .item-icon-client:hover,
- .item-icon-client:focus {
   border-color: var(--background-button-color);
  }
+
+ .link-clients:hover,
+ .link-clients:focus {
+  border-color: var(--background-button-color);
+  accent-color: var(--background-button-color);
+ }
+
+ .link-clients {
+        display: flex;
+      justify-content: center;
+      color: var(--icons);
+      align-items: center;
+      width: 170px;
+      height: 92px;
+      border: var(--icons) solid 1px;
+      border-radius: 4px;
+
+      }
