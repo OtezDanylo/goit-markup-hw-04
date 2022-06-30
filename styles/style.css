@@ -409,6 +409,10 @@ color:var(--background-button-color)
   padding-bottom: 94px;
 }
 
+.social-media-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .footer {
   background-color: var(--footer-background);
   padding: 60px 0;
@@ -418,6 +422,10 @@ color:var(--background-button-color)
   display: flex;
   align-items: baseline;
  }
+
+  .div-footer {
+    margin-left: 70px;
+  }
 
 .address {
   font-style: normal;
